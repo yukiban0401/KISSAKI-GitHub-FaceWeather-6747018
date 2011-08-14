@@ -10,8 +10,10 @@
 
 
 @interface FaceWeatherViewController : UIViewController {
-    
-}
+    IBOutlet UIButton *YokohamaButton;
+    IBOutlet UILabel *yokohamaLabel;
+    IBOutlet UIButton *tokyoButton;
+    }
 
 - (IBAction)yokohamaTapped:(id)sender;
 - (IBAction)tan_goTapped:(id)sender;

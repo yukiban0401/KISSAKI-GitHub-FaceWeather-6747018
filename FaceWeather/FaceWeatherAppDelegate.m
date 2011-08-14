@@ -69,7 +69,7 @@
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(failure:) name:@"ANSWER_FAILURE" object:nil];
     
     
-    NSString * urlString = [NSString stringWithFormat:@"http://weather.livedoor.com/forecast/webservice/rest/v1?city=46&day=today", [dict valueForKey:@"placeNumber"]];
+    NSString * urlString = [NSString stringWithFormat:@"http://weather.livedoor.com/forecast/webservice/rest/v1?city=%d&day=today", [[dict valueForKey:@"placeNumber"]intValue]];
     
     NSMutableURLRequest * currentRequest = [[NSMutableURLRequest alloc]initWithURL:[NSURL URLWithString:urlString]];
 	[currentRequest setHTTPMethod:@"GET"];
